@@ -1,0 +1,10 @@
+<listado-proyectos 
+listName="Listados Proyectos desde Servicio"
+[proyectos]="ProyectosService.proyectos()"
+></listado-proyectos>
+
+<app-add-proyecto
+    (newProyecto)="ProyectosService.addProyecto($event)"
+    (deleteProyecto)="ProyectosService.dellProyecto()"
+></app-add-proyecto>
+
