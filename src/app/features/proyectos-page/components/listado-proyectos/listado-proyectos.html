@@ -1,9 +1,7 @@
-<h1>{{ listName }}</h1>
+<h3>{{ listName() }}</h3>
 
- <ul>
-      <h3>Listado</h3>
-      @for(proyecto of proyectos(); track $index){
-      <li>{{ proyecto.nombre }} - {{ proyecto.descripcion }}</li>
-
-      }
- </ul>
+<ul>
+     @for(proyecto of proyectos(); track $index){
+     <li>{{ proyecto.nombre }} - {{ proyecto.descripcion }}</li>
+     }
+</ul>

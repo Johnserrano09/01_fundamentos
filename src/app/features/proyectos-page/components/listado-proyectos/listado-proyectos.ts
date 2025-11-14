@@ -9,8 +9,8 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 })
 export class ListadoProyectos { 
 
-  listName = input.required<string>();
- proyectos = input.required<Proyecto[]>();
+listName = input.required<string>();
+proyectos = input.required<Proyecto[]>();
 
   
 }
