@@ -1,10 +1,13 @@
-<listado-proyectos 
-listName="Listados Proyectos desde Servicio"
-[proyectos]="ProyectosService.proyectos()"
+<listado-proyectos
+  listName="Listado Proyectos desde Servicio"
+  [proyectos]="proyectosService.proyectos()"
 ></listado-proyectos>
 
-<app-add-proyecto
-    (newProyecto)="ProyectosService.addProyecto($event)"
-    (deleteProyecto)="ProyectosService.dellProyecto()"
-></app-add-proyecto>
+<p>Componente que agregue al servicio</p>
 
+<add-proyecto
+
+  (newPoyecto)="proyectosService.addProyecto($event)"
+  (removeProyecto)="proyectosService.delProyecto()"
+
+></add-proyecto>

@@ -7,9 +7,9 @@ import { Component, signal } from '@angular/core';
 
 })
 export class PerfilPage {
-  name = signal(' John');
-  lastName = signal('Serrano');
-  age = signal(21);
+  name = signal('Adrian');
+  lastName = signal('Lazo');
+  age = signal(26);
 
 
   getFullName() {
@@ -18,19 +18,19 @@ export class PerfilPage {
 
 
   changeData() {
-    this.name.set('Maria ');
-    this.lastName.set('Serrano');
+    this.name.set('Ana');
+    this.lastName.set('Gonzales');
     this.age.set(25);
   }
 
 
   changeAge() {
-    this.age.set(20);
+    this.age.set(18);
   }
 
   resetData() {
-    this.name.set('John');
-    this.lastName.set('Serrano');
+    this.name.set('Adrian');
+    this.lastName.set('Lazo');
     this.age.set(26);
   }
 }

@@ -1,33 +1,32 @@
-import { ChangeDetectionStrategy, Component, Output, EventEmitter, signal, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, output, signal } from '@angular/core';
 
 @Component({
-  selector: 'app-add-proyecto',
+  selector: 'add-proyecto',
   imports: [],
   templateUrl: './add-proyecto.html',
-  styleUrl: './add-proyecto.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-
 export class AddProyecto {
   name = signal('');
   description = signal('');
 
-  newProyecto = output<Proyecto>();
-  deleteProyecto = output<number>();
+  newPoyecto = output<Proyecto>();
+  removeProyecto = output<number>();
 
-  dellProyecto(id: number) {
-    this.deleteProyecto.emit(id);
-  }
   addProyecto() {
     const newProyecto: Proyecto = {
       id: Math.floor(Math.random() * 1000),
       nombre: this.name(),
       descripcion: this.description(),
-
     };
-    this.newProyecto.emit(newProyecto);
+
+    this.newPoyecto.emit(newProyecto);
     this.name.set('');
     this.description.set('');
+  }
+
+  delProyecto(id : number) {
+    this.removeProyecto.emit(id);
   }
 
   changeName(value: string) {

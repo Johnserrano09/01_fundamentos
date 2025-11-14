@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { ProyectosService } from './services/proyectos-service';
 import { ListadoProyectos } from "../proyectos-page/components/listado-proyectos/listado-proyectos";
-import { AddProyecto } from '../proyectos-page/components/add-proyecto/add-component/add-proyecto';
+import { AddProyecto } from "../proyectos-page/components/add-proyecto/add-proyecto";
 
 @Component({
   selector: 'app-proyectos-dos-page',
@@ -10,6 +10,6 @@ import { AddProyecto } from '../proyectos-page/components/add-proyecto/add-compo
 })
 export class ProyectosDosPage {
 
-  ProyectosService = inject(ProyectosService);
+  proyectosService = inject(ProyectosService);
 
 }

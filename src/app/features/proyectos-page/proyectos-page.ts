@@ -1,13 +1,12 @@
-import { Component, signal, input } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ListadoProyectos } from "./components/listado-proyectos/listado-proyectos";
 
 @Component({
   selector: 'app-proyectos-page',
-  standalone: true,
   imports: [ListadoProyectos],
   templateUrl: './proyectos-page.html',
-  
 })
+
 export class ProyectosPage {
   name = signal('');
   description = signal('');
