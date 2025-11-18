@@ -1,35 +1,31 @@
 import { Routes } from '@angular/router';
-import { HomePage } from './features/module/homePage/homePage';
+import { HomePage } from './features/homePage/homePage';
 import { PerfilPage } from './features/perfilPage/perfilPage';
-import { ProyectosPage } from './features/proyectos-page/proyectos-page';
-import { ProyectosDosPage } from './features/proyectos-dos-page/proyectos-dos-page';
-import { FormularioPage } from './features/formularios/formularios-page';
+import { Trabajos as TrabajosPage } from './features/Trabajos/TrabajosPage';
+import { ProyectosPage } from './features/ProyectosPage/ProyectosPage';
+import { FormularioPage } from './features/formularioPage/pages/formularioPage/formularioPage';
+import { formulariosRoutes } from './features/formularioPage/formularios-routes';
 
 export const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: HomePage,
-    title : 'Contador'
   },
   {
     path: 'perfil',
     component: PerfilPage,
-    title : 'Perfil'
   },
   {
-    path: 'proyectos-page',
+    path: 'trabajos',
+    component: TrabajosPage,
+  },
+  {
+    path: 'proyectos',
     component: ProyectosPage,
-    title : 'Proyectos'
   },
   {
-    path: 'proyectos-dos-page',
-    component: ProyectosDosPage,
-    title : 'Proyectos Dos Page'
+    path: 'formulario',
+    loadChildren: () =>
+      import('./features/formularioPage/formularios-routes').then((m) => m.formulariosRoutes),
   },
-  {
-    path: 'formularios-page',
-    component: FormularioPage,
-    title: 'Formularios'
-
-  }
 ];
